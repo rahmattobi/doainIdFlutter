@@ -138,7 +138,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 left: 10,
               ),
               child: Text(
@@ -152,14 +152,15 @@ class _HomePageState extends State<HomePage> {
             Container(
               height: height,
               width: double.infinity,
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 10,
                 left: 10,
                 right: 10,
               ),
               child: _loading!
                   ? Center(
-                      child: Container(child: CircularProgressIndicator()),
+                      child:
+                          Container(child: const CircularProgressIndicator()),
                     )
                   : ListView.builder(
                       itemCount: null == _listDoa ? 0 : _listDoa!.length,
